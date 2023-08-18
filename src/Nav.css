@@ -1,0 +1,23 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.Navbar{
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    background-color: rgb(11, 52, 128);
+
+}
+.link p{
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.link{
+    text-decoration: none;
+
+
+}
