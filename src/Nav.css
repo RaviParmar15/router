@@ -7,8 +7,11 @@
     display: flex;
     justify-content: space-around;
     padding: 20px;
+    margin: 0px 10px;
     background-color: rgb(11, 52, 128);
-
+    border: 2px solid  rgb(11, 52, 128);
+    border-radius: 10px;
+    box-shadow: 0px 10px 6px -6px #777;
 }
 .link p{
     color: white;
