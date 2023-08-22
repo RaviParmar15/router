@@ -1,11 +1,11 @@
 import React from 'react'
 
-const Login = () => {
+const Kids = () => {
   return (
     <div>
-      <h1>LOGIN</h1>
+        <h1>Kids</h1>
     </div>
   )
 }
 
-export default Login
+export default Kids
