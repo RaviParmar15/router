@@ -15,13 +15,13 @@ import './Nav.css';
 
 
 const AllRoutes = () => {
-  let [logged,setLogged]=useState(false)
+  let [logged,setLogged]=useState(true)
   return (
     <div>
         <Routes>
             <Route path='/' element={<Home></Home>}></Route>
             <Route path='About' element={<About></About>}></Route>
-            {/* <Route path='/Product' element={logged ? <Product/>:<Signup/>}></Route> */}
+            <Route path='/Product' element={logged ? <Product/>:<Signup/>}></Route>
             <Route path='/Product' element={<Product></Product>}>
                 <Route path='men' element={<Men></Men>}></Route>
                 <Route path='Women' element={<Women/>}></Route>

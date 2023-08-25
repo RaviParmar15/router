@@ -1,13 +1,28 @@
-import React from 'react'
-import { useParams } from 'react-router-dom'
+import React, { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
+import Ui from "./Ui";
+import './Nav.css';
+
+
 
 const Data = () => {
-    let data=useParams()
-  return (
-    <div>
-        <h1>Data</h1>
-    </div>
-  )
-}
+  let [products, setProducts] = useState({});
+  let { id } = useParams();
 
-export default Data
+  const getdata = async () => {
+    let res = await fetch(`https://dummyjson.com/products/${id}`);
+    let data = await res.json();
+    console.log(data);
+    setProducts(data);
+  };
+  useEffect(() => {
+    getdata();
+  }, []);
+  return (
+    <div >
+      <Ui {...products}></Ui>
+    </div>
+  );
+};
+
+export default Data;
